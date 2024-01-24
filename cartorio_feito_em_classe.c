@@ -132,7 +132,8 @@ int main()
 	    printf("   Escolha a Opção Desejada no Menu:\n\n");
 	    printf("\t1 - Registro de Usuários\n");
 	    printf("\t2 - Consultar Usuário\n");
-	    printf("\t3 - Deletar Usuário\n\n\n");
+	    printf("\t3 - Deletar Usuário\n");
+	    printf("\t4 - Sair do Sistema\n\n\n");
 	    printf("  Opção:"); //Final do menu
 	    
 	    scanf("%d", &opcao); //Armazenando Informações
@@ -151,6 +152,11 @@ int main()
 		                      // switch de seleção da operação desejada
 		    case 3:
 		    deletar();
+		    break;
+		    
+		    case 4:
+		    printf("\n\n\n\n\tObrgado por Usar o Sistema de Cartório EBAC!!\n\n\n");
+		    return 0;
 		    break;
 		    
 		    default:
