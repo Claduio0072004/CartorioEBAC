@@ -121,48 +121,66 @@ int main()
 	int opcao=0; //Definindo variáveis
 	int x=1;
 	
-	for(x=1;x=1;)
-	{
-		
-		system("cls");
+	char senha[20] ="a";
+	int comparacao;
 	
-        setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem
+	printf("\n\t### Cartório da EBAC ###\n\n");
+	printf("\tLogin de Administrador\n\n\n");
+	printf("  Digite sua Senha:");
+	scanf("%s",senha);
+	
+	comparacao = strcmp(senha, "admin");
+	
+	if (comparacao == 0)
+	{
+	
+		for(x=1;x=1;)
+		{
+			
+			system("cls");
+		
+ 	       setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem
         
-	    printf("\n\t### Cartório da EBAC ###\n\n"); //O começo do menu
-	    printf("   Escolha a Opção Desejada no Menu:\n\n");
-	    printf("\t1 - Registro de Usuários\n");
-	    printf("\t2 - Consultar Usuário\n");
-	    printf("\t3 - Deletar Usuário\n");
-	    printf("\t4 - Sair do Sistema\n\n\n");
-	    printf("  Opção:"); //Final do menu
+		    printf("\n\t### Cartório da EBAC ###\n\n"); //O começo do menu
+		    printf("   Escolha a Opção Desejada no Menu:\n\n");
+		    printf("\t1 - Registro de Usuários\n");
+		    printf("\t2 - Consultar Usuário\n");
+		    printf("\t3 - Deletar Usuário\n");
+		    printf("\t4 - Sair do Sistema\n\n\n");
+		    printf("  Opção:"); //Final do menu
+		    
+		    scanf("%d", &opcao); //Armazenando Informações
 	    
-	    scanf("%d", &opcao); //Armazenando Informações
+		    system("cls"); //Limpando a tela
 	    
-	    system("cls"); //Limpando a tela
-	    
-	    switch(opcao) //Começo das opções
-	    {
-	        case 1:
-	        cadastro();
-	        break;
+		    switch(opcao) //Começo das opções
+		    {
+		        case 1:
+		        cadastro();
+		        break;
 	       
-		    case 2:
-	        consulta();
-		    break;
+			    case 2:
+	        	consulta();
+		    	break;
 		                      // switch de seleção da operação desejada
-		    case 3:
-		    deletar();
-		    break;
+			    case 3:
+			    deletar();
+			    break;
 		    
-		    case 4:
-		    printf("\n\n\n\n\tObrgado por Usar o Sistema de Cartório EBAC!!\n\n\n");
-		    return 0;
-		    break;
+			    case 4:
+			    printf("\n\n\n\n\tObrigado por Usar o Sistema de Cartório EBAC!!\n\n\n");
+			    return 0;
+			    break;
 		    
-		    default:
-		    printf("\n\n\tOpção invalida tente novamente!\n\n\n");
-	    	system("pause");
-			break;	 	
-    	} //Aparentemente o fim das opções =)
+			    default:
+			    printf("\n\n\tOpção invalida tente novamente!\n\n\n");
+	   		 	system("pause");
+				break;	 	
+    		} //Aparentemente o fim das opções =)
+		}
 	}
+	else
+	
+	printf("\n\n\n\tSenha de Administrador Incorreta!!\n\n\n");	
+	
 }
