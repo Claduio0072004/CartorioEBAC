@@ -124,6 +124,8 @@ int main()
 	char senha[20] ="a";
 	int comparacao;
 	
+	setlocale(LC_ALL, "Portuguese");
+	
 	printf("\n\t### Cartório da EBAC ###\n\n");
 	printf("\tLogin de Administrador\n\n\n");
 	printf("  Digite sua Senha:");
@@ -139,7 +141,7 @@ int main()
 			
 			system("cls");
 		
- 	       setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem
+ 	    	setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem
         
 		    printf("\n\t### Cartório da EBAC ###\n\n"); //O começo do menu
 		    printf("   Escolha a Opção Desejada no Menu:\n\n");
