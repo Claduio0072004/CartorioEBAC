@@ -79,6 +79,7 @@ int consulta()
 	
 	if(file == NULL)
 	{
+		fclose(file);
 		printf("\n\n  Não foi encontrado o arquivo desejado\n\n");
 	}
 	
@@ -90,6 +91,7 @@ int consulta()
 		printf("\n\n");
 	}
 	
+	fclose(file);
 	system("pause");
 	
 }
